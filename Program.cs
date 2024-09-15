@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using MyAspMvcBlog.Data;
+using MyAspMvcPost.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

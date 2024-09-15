@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using MyAspMvcBlog.Entities;
+using MyAspMvcPost.Entities;
 
-namespace MyAspMvcBlog.Data
+namespace MyAspMvcPost.Data
 {
     public class ApplicationDbContext : DbContext
     {
@@ -9,18 +9,19 @@ namespace MyAspMvcBlog.Data
             : base(options)
         {
         }
-        
-        public DbSet<Blog> blogs { get; set; }
+
+        public DbSet<Post> Posts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Blog>().HasData([
-                new Blog { Id = 1, Title = "My first blog", Content = "This is my first blog" },
-                new Blog { Id = 2, Title = "My second blog", Content = "This is my second blog" },
-                new Blog { Id = 3, Title = "My third blog", Content = "This is my third blog" }
+            modelBuilder.Entity<Post>().HasData([
+                new Post { Id = 1, Title = "My first post", Content = "This is my first post", Image = "https://picsum.photos/200/300", UserId = 1, ReadTimeMinute = 5 },
+                new Post { Id = 2, Title = "My second post", Content = "This is my second post", Image = "https://picsum.photos/200/300", UserId = 1, ReadTimeMinute = 5 },
+                new Post { Id = 3, Title = "My third post", Content = "This is my third post", Image = "https://picsum.photos/200/300", UserId = 1, ReadTimeMinute = 5 }
             ]);
         }
+
     }
 }
