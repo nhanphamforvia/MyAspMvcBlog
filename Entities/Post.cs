@@ -13,11 +13,10 @@ namespace MyAspMvcPost.Entities
         [Required(ErrorMessage = "Content is required!")]
         public string Content { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Image is required!")]
-        public string Image { get; set; } = string.Empty;
-
         [Required(ErrorMessage = "Created is required!")]
         public DateTime Created { get; set; } = DateTime.Now;
+        
+        public string Image { get; set; } = string.Empty;
 
         public int UserId { get; set; }
 
