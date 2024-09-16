@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyAspMvcPost.Data;
 
@@ -11,9 +12,11 @@ using MyAspMvcPost.Data;
 namespace MyAspMvcPost.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240916183846_SeedAminUser")]
+    partial class SeedAminUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -151,13 +154,13 @@ namespace MyAspMvcPost.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "fbb877fb-cc4e-4f74-938d-37ee951460d4",
+                            ConcurrencyStamp = "09decb5c-0c97-4d4b-b568-42cca9d493c7",
                             Email = "admin@localhost",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@LOCALHOST",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHEfy8G8XBIttckNNOVY0iuihxeGkVP6vQ7AQunGfw3JCh6M8hYjdAUY7sQX3qE+3Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAENVc8ohVzhusctLNiabuWO154NgitKmnZ/XSY9se+yD+rk+DAtnXXx4BTlQrUfo+7w==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -295,7 +298,7 @@ namespace MyAspMvcPost.Migrations
                         {
                             Id = 1,
                             Content = "This is my first post",
-                            Created = new DateTime(2024, 9, 17, 2, 3, 5, 979, DateTimeKind.Local).AddTicks(7228),
+                            Created = new DateTime(2024, 9, 17, 1, 38, 45, 161, DateTimeKind.Local).AddTicks(5376),
                             Image = "https://picsum.photos/200/300",
                             ReadTimeMinute = 5,
                             Title = "My first post",
@@ -305,7 +308,7 @@ namespace MyAspMvcPost.Migrations
                         {
                             Id = 2,
                             Content = "This is my second post",
-                            Created = new DateTime(2024, 9, 17, 2, 3, 5, 979, DateTimeKind.Local).AddTicks(7245),
+                            Created = new DateTime(2024, 9, 17, 1, 38, 45, 161, DateTimeKind.Local).AddTicks(5393),
                             Image = "https://picsum.photos/200/300",
                             ReadTimeMinute = 5,
                             Title = "My second post",
@@ -315,7 +318,7 @@ namespace MyAspMvcPost.Migrations
                         {
                             Id = 3,
                             Content = "This is my third post",
-                            Created = new DateTime(2024, 9, 17, 2, 3, 5, 979, DateTimeKind.Local).AddTicks(7248),
+                            Created = new DateTime(2024, 9, 17, 1, 38, 45, 161, DateTimeKind.Local).AddTicks(5395),
                             Image = "https://picsum.photos/200/300",
                             ReadTimeMinute = 5,
                             Title = "My third post",
